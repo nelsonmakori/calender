@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calender.css">
+  <title>calender</title>
+</head>
+<body>
+  <u><h1 class="header">display calender</h1></u>
+  <div class="calender">
+    
+    <div class="left">
+      <p class="day">tuesday</p>
+      <p class="month">may</p>
+    
+
+    </div>
+    <div class="right">
+      <p class="date">12</p>
+      <p class="year">year</p>
+
+    </div>
+
+  </div>
+
+  <script>
+    const day = document.querySelector('.day')
+    const month = document.querySelector('.month')
+    const year = document.querySelector('.year')
+    const date = document.querySelector('.date')
+    const time = document.querySelector('.time')
+
+     function todayDate(){
+      const today = new Date()
+      const weekDays =['sunday','monday','tuesday','wenesday','thursday','friday','saturday']
+      const months = ['january','february','march','april','may','june','july','august','september','october','november','December']
+
+      day.innerHTML = today.getDate();
+      month.innerHTML = months[today.getMonth()];
+      year.innerHTML = today.getFullYear();
+      date.innerHTML = weekDays[today.getDay()]
+       
+     }
+     todayDate()
+     
+  </script>
+  
+</body>
+</html>
